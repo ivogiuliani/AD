@@ -1,0 +1,2355 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andrea Damiani | Life &amp; Business Coach Professionista</title>
+  <meta name="description" content="Andrea Damiani - Life & Business Coach Professionista AICP. Sessioni di Business Coaching per Aziende e Coaching per Concorsi Professionali. Scopri come raggiungere i tuoi obiettivi.">
+  <meta name="author" content="Andrea Damiani">
+  <meta property="og:title" content="Andrea Damiani | Life & Business Coach Professionista">
+  <meta property="og:description" content="Formatore e Coach Professionista AICP con oltre 20 anni di esperienza. Business Coaching, Executive Coaching, Coaching per Concorsi Professionali.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://andreadamianicoach.it">
+  <meta property="og:image" content="img/business-coaching.jpg">
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    /* ============================================
+       CSS RESET & VARIABLES
+       ============================================ */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg-primary: #0a0a0a;
+      --bg-secondary: #111111;
+      --bg-tertiary: #1a1a1a;
+      --bg-card: #141414;
+      --gold: #c9a84c;
+      --gold-light: #dfc06e;
+      --gold-dark: #a8863a;
+      --gold-glow: rgba(201, 168, 76, 0.15);
+      --text-primary: #f5f0e8;
+      --text-secondary: #b0a89e;
+      --text-muted: #7a746c;
+      --border: rgba(201, 168, 76, 0.12);
+      --border-light: rgba(255, 255, 255, 0.06);
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Inter', -apple-system, sans-serif;
+      --font-accent: 'Cormorant Garamond', Georgia, serif;
+      --transition: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -webkit-tap-highlight-color: transparent;
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+
+    /* ============================================
+       SCROLLBAR
+       ============================================ */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg-primary); }
+    ::-webkit-scrollbar-thumb { background: var(--gold-dark); border-radius: 3px; }
+
+    /* ============================================
+       SELECTION
+       ============================================ */
+    ::selection { background: var(--gold); color: var(--bg-primary); }
+
+    /* ============================================
+       UTILITY
+       ============================================ */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; width: 100%; }
+    .container-narrow { max-width: 800px; margin: 0 auto; padding: 0 2rem; width: 100%; }
+    .section-padding { padding: 7rem 0; }
+
+    .section-label {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+      position: relative;
+      padding-left: 3rem;
+    }
+    .section-label::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 2rem;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 500;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      color: var(--text-primary);
+    }
+
+    .section-subtitle {
+      font-family: var(--font-accent);
+      font-size: 1.25rem;
+      color: var(--text-secondary);
+      font-weight: 400;
+      font-style: italic;
+      max-width: 600px;
+    }
+
+    .gold-line {
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      margin: 1.5rem 0;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem 2.5rem;
+      font-family: var(--font-body);
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.4s var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-primary {
+      background: var(--gold);
+      color: var(--bg-primary);
+    }
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(201, 168, 76, 0.3);
+    }
+    .btn-outline {
+      background: transparent;
+      color: var(--gold);
+      border: 1px solid var(--gold);
+    }
+    .btn-outline:hover {
+      background: var(--gold);
+      color: var(--bg-primary);
+      transform: translateY(-2px);
+    }
+
+    /* ============================================
+       REVEAL ANIMATIONS
+       ============================================ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s var(--transition), transform 0.8s var(--transition);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* ============================================
+       NAVIGATION
+       ============================================ */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 1.5rem 0;
+      transition: all 0.4s var(--transition);
+    }
+    .nav.scrolled {
+      background: rgba(10, 10, 10, 0.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      padding: 0.8rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+    }
+    .nav-logo img {
+      height: 36px;
+      width: auto;
+    }
+    .nav-logo-text {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: var(--text-primary);
+      letter-spacing: 0.02em;
+    }
+    .nav-logo-text span { color: var(--gold); }
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2.5rem;
+      align-items: center;
+    }
+    .nav-links a {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.3s;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--gold);
+      transition: width 0.3s var(--transition);
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-cta {
+      padding: 0.6rem 1.5rem !important;
+      background: var(--gold) !important;
+      color: var(--bg-primary) !important;
+      font-size: 0.72rem !important;
+      border-radius: 0;
+    }
+    .nav-cta:hover {
+      background: var(--gold-light) !important;
+    }
+    .nav-cta::after { display: none !important; }
+
+    /* Mobile menu */
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+    .menu-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text-primary);
+      margin: 5px 0;
+      transition: all 0.3s;
+    }
+    .menu-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .menu-toggle.active span:nth-child(2) { opacity: 0; }
+    .menu-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+    /* ============================================
+       HERO
+       ============================================ */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('img/hero-bg.jpg') center/cover no-repeat;
+      opacity: 0.12;
+      filter: grayscale(60%);
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(201, 168, 76, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 50%, rgba(201, 168, 76, 0.05) 0%, transparent 60%);
+      z-index: 1;
+    }
+    .hero-content { position: relative; z-index: 2; padding: 0 2rem; }
+    .hero-label {
+      font-family: var(--font-body);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: fadeUp 1s 0.3s forwards;
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 400;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+      opacity: 0;
+      animation: fadeUp 1s 0.5s forwards;
+    }
+    .hero-title em {
+      font-style: italic;
+      color: var(--gold);
+    }
+    .hero-quote {
+      font-family: var(--font-accent);
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      color: var(--text-secondary);
+      font-style: italic;
+      max-width: 650px;
+      margin: 1.5rem auto 2.5rem;
+      opacity: 0;
+      animation: fadeUp 1s 0.7s forwards;
+    }
+    .hero-quote cite {
+      display: block;
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+      color: var(--text-muted);
+      font-style: normal;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 1s 0.9s forwards;
+    }
+    .hero-scroll {
+      position: absolute;
+      bottom: 3rem;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      animation: fadeUp 1s 1.2s forwards;
+    }
+    .hero-scroll a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+    .hero-scroll .line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+      animation: scrollLine 2s infinite;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes scrollLine {
+      0% { opacity: 0; transform: scaleY(0); transform-origin: top; }
+      50% { opacity: 1; transform: scaleY(1); }
+      100% { opacity: 0; transform: scaleY(0); transform-origin: bottom; }
+    }
+
+    /* ============================================
+       ABOUT
+       ============================================ */
+    .about { background: var(--bg-secondary); }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .about-image-wrapper {
+      position: relative;
+    }
+    .about-image-wrapper::before {
+      content: '';
+      position: absolute;
+      top: -1rem;
+      left: -1rem;
+      right: 1rem;
+      bottom: 1rem;
+      border: 1px solid var(--gold);
+      opacity: 0.3;
+    }
+    .about-image {
+      width: 100%;
+      aspect-ratio: 3/4;
+      background: var(--bg-tertiary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .about-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(20%);
+      transition: filter 0.5s;
+    }
+    .about-image:hover img {
+      filter: grayscale(0%);
+    }
+    .about-image-placeholder {
+      font-family: var(--font-display);
+      font-size: 4rem;
+      color: var(--gold);
+      opacity: 0.3;
+    }
+    .about-stats {
+      position: absolute;
+      bottom: -1.5rem;
+      right: -1.5rem;
+      background: var(--gold);
+      color: var(--bg-primary);
+      padding: 1.5rem 2rem;
+      text-align: center;
+    }
+    .about-stats .number {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+    .about-stats .label {
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-top: 0.25rem;
+    }
+    .about-text p {
+      color: var(--text-secondary);
+      margin-bottom: 1.2rem;
+      font-size: 0.95rem;
+    }
+    .about-credentials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+    .credential {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .credential i {
+      color: var(--gold);
+      font-size: 1rem;
+    }
+    .credential span {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    /* ============================================
+       MISSION (PHILOSOPHY)
+       ============================================ */
+    .mission {
+      position: relative;
+      text-align: center;
+    }
+    .mission::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, var(--gold-glow), transparent 70%);
+    }
+    .mission-content { position: relative; z-index: 2; }
+    .mission-quote {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 3.5vw, 2.8rem);
+      font-weight: 400;
+      line-height: 1.4;
+      max-width: 900px;
+      margin: 0 auto 2rem;
+      font-style: italic;
+    }
+    .mission-quote .highlight { color: var(--gold); }
+    .mission-text {
+      max-width: 700px;
+      margin: 0 auto;
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    /* ============================================
+       PILLARS
+       ============================================ */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .pillar {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      transition: all 0.5s var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .pillar::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+    .pillar:hover { transform: translateY(-8px); border-color: var(--border); }
+    .pillar:hover::before { opacity: 1; }
+    .pillar-icon {
+      font-size: 2rem;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+    .pillar-icon img {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      filter: brightness(0) invert(0.75) sepia(1) saturate(3) hue-rotate(10deg) brightness(0.85);
+    }
+    .pillar h3 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+    .pillar p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* ============================================
+       SERVICES
+       ============================================ */
+    .services { background: var(--bg-secondary); }
+    .services-tabs {
+      display: flex;
+      gap: 0;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 3rem;
+      overflow-x: auto;
+    }
+    .tab-btn {
+      background: none;
+      border: none;
+      padding: 1rem 2rem;
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      cursor: pointer;
+      position: relative;
+      transition: color 0.3s;
+      white-space: nowrap;
+    }
+    .tab-btn::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transition: transform 0.3s var(--transition);
+    }
+    .tab-btn.active { color: var(--gold); }
+    .tab-btn.active::after { transform: scaleX(1); }
+    .tab-btn:hover { color: var(--text-primary); }
+
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+    .service-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      padding: 2.5rem 2rem;
+      transition: all 0.4s var(--transition);
+      position: relative;
+    }
+    .service-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 0;
+      background: linear-gradient(to top, var(--gold-glow), transparent);
+      transition: height 0.4s var(--transition);
+    }
+    .service-card:hover { border-color: var(--border); transform: translateY(-4px); }
+    .service-card:hover::after { height: 100%; }
+    .service-card-content { position: relative; z-index: 2; }
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      border: 1px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      color: var(--gold);
+      font-size: 1.1rem;
+    }
+    .service-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+    .service-card p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* PCP Section */
+    .pcp-section {
+      margin-top: 3rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 3rem;
+    }
+    .pcp-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      margin-top: 2rem;
+    }
+    .pcp-module {
+      padding: 1.5rem;
+      border-left: 2px solid var(--gold);
+    }
+    .pcp-module h4 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .pcp-module p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+    }
+    .pcp-price {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      color: var(--gold);
+      margin-top: 1.5rem;
+    }
+
+    /* Business Dojo */
+    .dojo-section {
+      margin-top: 3rem;
+      background: linear-gradient(135deg, var(--bg-card), var(--bg-tertiary));
+      border: 1px solid var(--border);
+      padding: 3rem;
+    }
+    .dojo-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .dojo-modules {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .dojo-module {
+      padding: 1.5rem;
+      background: rgba(201, 168, 76, 0.05);
+      border-left: 2px solid var(--gold);
+    }
+    .dojo-module h4 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .dojo-module p {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+    .dojo-benefits li {
+      list-style: none;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border-light);
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      padding-left: 1.5rem;
+      position: relative;
+    }
+    .dojo-benefits li::before {
+      content: '\f00c';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-size: 0.75rem;
+    }
+
+    /* ============================================
+       COACHING DEFINITION
+       ============================================ */
+    .definition {
+      text-align: center;
+      position: relative;
+    }
+    .definition-box {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 3rem;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      position: relative;
+    }
+    .definition-box::before,
+    .definition-box::after {
+      content: '\201C';
+      font-family: var(--font-display);
+      font-size: 5rem;
+      color: var(--gold);
+      opacity: 0.2;
+      position: absolute;
+    }
+    .definition-box::before { top: 1rem; left: 2rem; }
+    .definition-box::after { content: '\201D'; bottom: 0; right: 2rem; }
+    .definition-text {
+      font-family: var(--font-accent);
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      font-style: italic;
+    }
+    .definition-source {
+      margin-top: 1.5rem;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+
+    /* ============================================
+       TESTIMONIALS
+       ============================================ */
+    .testimonials { background: var(--bg-secondary); }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .testimonial-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      padding: 2.5rem 2rem;
+      position: relative;
+      transition: all 0.4s var(--transition);
+    }
+    .testimonial-card:hover {
+      border-color: var(--border);
+      transform: translateY(-4px);
+    }
+    .testimonial-card::before {
+      content: '\201C';
+      font-family: var(--font-display);
+      font-size: 4rem;
+      color: var(--gold);
+      opacity: 0.2;
+      position: absolute;
+      top: 1rem;
+      left: 1.5rem;
+      line-height: 1;
+    }
+    .testimonial-text {
+      font-family: var(--font-accent);
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 2;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .testimonial-avatar {
+      width: 40px;
+      height: 40px;
+      background: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--bg-primary);
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    .testimonial-name {
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .testimonial-role {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .testimonials-more {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    /* Show more testimonials */
+    .testimonials-hidden {
+      display: none;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .testimonials-hidden.show {
+      display: grid;
+    }
+
+    /* ============================================
+       BLOG
+       ============================================ */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .blog-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      overflow: hidden;
+      transition: all 0.4s var(--transition);
+    }
+    .blog-card:hover {
+      border-color: var(--border);
+      transform: translateY(-4px);
+    }
+    .blog-card-image {
+      height: 200px;
+      background: var(--bg-tertiary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .blog-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      transition: transform 0.6s var(--transition), filter 0.4s;
+      filter: brightness(0.7) grayscale(30%);
+    }
+    .blog-card:hover .blog-card-image img {
+      transform: scale(1.05);
+      filter: brightness(0.85) grayscale(0%);
+    }
+    .blog-card-image i {
+      font-size: 2rem;
+      color: var(--gold);
+      opacity: 0.3;
+    }
+    .blog-card-image .blog-category {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: var(--gold);
+      color: var(--bg-primary);
+      padding: 0.25rem 0.75rem;
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .blog-card-content {
+      padding: 2rem;
+    }
+    .blog-date {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+    .blog-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+      line-height: 1.4;
+    }
+    .blog-card p {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    .blog-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--gold);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      transition: gap 0.3s;
+    }
+    .blog-link:hover { gap: 0.75rem; }
+
+    /* ============================================
+       VIDEO
+       ============================================ */
+    .video-section { background: var(--bg-secondary); }
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .video-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      overflow: hidden;
+      transition: all 0.4s var(--transition);
+      cursor: pointer;
+    }
+    .video-card:hover { border-color: var(--border); transform: translateY(-4px); }
+    .video-thumb {
+      aspect-ratio: 16/9;
+      background: var(--bg-tertiary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .video-thumb img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.5) grayscale(30%);
+      transition: filter 0.4s, transform 0.6s var(--transition);
+    }
+    .video-card:hover .video-thumb img {
+      filter: brightness(0.65) grayscale(0%);
+      transform: scale(1.05);
+    }
+    .video-play {
+      width: 60px;
+      height: 60px;
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-size: 1.2rem;
+      transition: all 0.3s;
+    }
+    .video-card:hover .video-play {
+      background: var(--gold);
+      color: var(--bg-primary);
+      transform: scale(1.1);
+    }
+    .video-info {
+      padding: 1.5rem;
+    }
+    .video-info h3 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+    .video-info p {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* ============================================
+       NUMBERS / STATS
+       ============================================ */
+    .stats-section {
+      background: var(--bg-tertiary);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      text-align: center;
+    }
+    .stat-item .stat-number {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 600;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .stat-item .stat-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 0.5rem;
+    }
+
+    /* ============================================
+       CONTACT
+       ============================================ */
+    .contact { background: var(--bg-secondary); }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      margin-top: 3rem;
+    }
+    .contact-info h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .contact-info p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-bottom: 2rem;
+      line-height: 1.8;
+    }
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .contact-detail-icon {
+      width: 48px;
+      height: 48px;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+    .contact-detail-text a {
+      color: var(--text-primary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .contact-detail-text a:hover { color: var(--gold); }
+    .contact-detail-text .label {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .contact-social {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .contact-social a {
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: all 0.3s;
+      font-size: 1rem;
+    }
+    .contact-social a:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      transform: translateY(-3px);
+    }
+
+    /* Contact form */
+    .contact-form { display: flex; flex-direction: column; gap: 1.5rem; }
+    .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+    .form-group label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+    }
+    .form-group input,
+    .form-group textarea {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      padding: 1rem;
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      transition: border-color 0.3s;
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--gold);
+    }
+    .form-group textarea { min-height: 140px; resize: vertical; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    .form-privacy {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .form-privacy a { color: var(--gold); text-decoration: none; }
+
+    /* Calendly embed */
+    .calendly-section {
+      margin-top: 3rem;
+      text-align: center;
+    }
+    .calendly-inline-widget {
+      min-width: 320px;
+      height: 650px;
+      border: 1px solid var(--border);
+    }
+
+    /* ============================================
+       FOOTER
+       ============================================ */
+    .footer {
+      background: var(--bg-primary);
+      border-top: 1px solid var(--border);
+      padding: 4rem 0 2rem;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .footer-brand {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+    }
+    .footer-brand span { color: var(--gold); }
+    .footer-desc {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      max-width: 350px;
+    }
+    .footer h4 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-primary);
+    }
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .footer-links a {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 2rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .footer-bottom p {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+    .footer-legal {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* ============================================
+       WHATSAPP BUTTON
+       ============================================ */
+    .whatsapp-float {
+      position: fixed;
+      bottom: calc(2rem + env(safe-area-inset-bottom, 0px));
+      right: 2rem;
+      z-index: 999;
+      width: 56px;
+      height: 56px;
+      background: #25d366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.6rem;
+      text-decoration: none;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+      transition: all 0.3s;
+      animation: pulse 2s infinite;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 30px rgba(37, 211, 102, 0.5);
+    }
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
+      50% { box-shadow: 0 4px 30px rgba(37, 211, 102, 0.6); }
+    }
+
+    /* ============================================
+       RESPONSIVE
+       ============================================ */
+    @media (max-width: 1024px) {
+      .pillars-grid { grid-template-columns: repeat(2, 1fr); }
+      .service-grid { grid-template-columns: repeat(2, 1fr); }
+      .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+      .testimonials-hidden { grid-template-columns: repeat(2, 1fr); }
+      .blog-grid { grid-template-columns: repeat(2, 1fr); }
+      .video-grid { grid-template-columns: repeat(2, 1fr); }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 3rem; }
+      .footer-top { grid-template-columns: 1fr; }
+      .pcp-grid { grid-template-columns: 1fr; }
+      .dojo-details { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(10, 10, 10, 0.98);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+      }
+      .nav-links.open { display: flex; }
+      .menu-toggle { display: block; z-index: 1001; }
+      .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .about-image-wrapper { max-width: 400px; margin: 0 auto; }
+      .pillars-grid { grid-template-columns: 1fr; }
+      .service-grid { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .testimonials-hidden { grid-template-columns: 1fr; }
+      .blog-grid { grid-template-columns: 1fr; }
+      .video-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .contact-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .section-padding { padding: 4rem 0; }
+      .pcp-section, .dojo-section { padding: 2rem 1.5rem; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .container, .container-narrow { padding: 0 1rem; }
+      .stats-grid { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+      .section-padding { padding: 3rem 0; }
+      .hero-title { font-size: 2rem; }
+      .hero-quote { font-size: 1rem; }
+      .hero-buttons { flex-direction: column; align-items: center; }
+      .hero-buttons .btn { width: 100%; justify-content: center; }
+      .section-title { font-size: 1.6rem; }
+      .pillar { padding: 2rem 1.5rem; }
+      .service-card { padding: 2rem 1.5rem; }
+      .testimonial-card { padding: 2rem 1.5rem; }
+      .blog-card-content { padding: 1.5rem; }
+      .pcp-section, .dojo-section { padding: 1.5rem 1rem; }
+      .definition-box { padding: 2rem 1.5rem; }
+      .btn { padding: 0.9rem 1.8rem; font-size: 0.72rem; }
+      .nav-logo-text { font-size: 1.1rem; }
+      .contact-social a { width: 40px; height: 40px; }
+      .about-stats { position: relative; bottom: auto; right: auto; margin-top: 1rem; }
+      .about-image-wrapper::before { display: none; }
+      .about-image { aspect-ratio: 4/3; }
+      .mission-quote { font-size: 1.3rem; }
+      .whatsapp-float { width: 50px; height: 50px; font-size: 1.4rem; bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px)); right: 1rem; }
+      .cta-box { padding: 2rem 1.5rem; }
+      .footer-top { gap: 2rem; }
+    }
+
+    /* iPhone SE e schermi molto piccoli */
+    @media (max-width: 360px) {
+      .container, .container-narrow { padding: 0 0.75rem; }
+      .hero-title { font-size: 1.7rem; }
+      .section-title { font-size: 1.4rem; }
+      .nav-logo img { height: 28px; }
+      .nav-logo-text { font-size: 1rem; }
+      .stat-number { font-size: 1.8rem !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================
+       NAVIGATION
+       ============================================ -->
+  <nav class="nav" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <img src="img/logo.png" alt="Andrea Damiani Coach Logo">
+        <span class="nav-logo-text">Andrea <span>Damiani</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">Chi Sono</a></li>
+        <li><a href="#services">Servizi</a></li>
+        <li><a href="#concorsi">Concorsi</a></li>
+        <li><a href="#testimonials">Testimonianze</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#video">Video</a></li>
+        <li><a href="#contact" class="nav-cta">Contattami</a></li>
+      </ul>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================
+       HERO
+       ============================================ -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <p class="hero-label">Life &amp; Business Coach Professionista</p>
+      <h1 class="hero-title">Dal presente al <em>futuro</em><br>che desideri</h1>
+      <blockquote class="hero-quote">
+        &ldquo;Se non ora, quando? Se non tu, chi? Se non qui, dove?&rdquo;
+        <cite>&mdash; Hillel</cite>
+      </blockquote>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn btn-primary">Prenota una sessione <i class="fas fa-arrow-right"></i></a>
+        <a href="#about" class="btn btn-outline">Scopri di pi&ugrave;</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <a href="#about">
+        <span>Scorri</span>
+        <span class="line"></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============================================
+       STATS BAR
+       ============================================ -->
+  <section class="stats-section section-padding" style="padding: 4rem 0;">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item reveal">
+          <div class="stat-number" data-target="20">0</div>
+          <div class="stat-label">Anni di Esperienza</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-1">
+          <div class="stat-number" data-target="7175">0</div>
+          <div class="stat-label">Follower Instagram</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-2">
+          <div class="stat-number" data-target="15">0</div>
+          <div class="stat-label">Testimonianze</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-3">
+          <div class="stat-number special" data-target="100" data-suffix="%">0</div>
+          <div class="stat-label">Simpatia</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       ABOUT
+       ============================================ -->
+  <section class="about section-padding" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-wrapper reveal">
+          <div class="about-image">
+            <img src="img/slide4.jpg" alt="Andrea Damiani - Life & Business Coach Professionista" loading="lazy">
+          </div>
+          <div class="about-stats">
+            <div class="number">20+</div>
+            <div class="label">Anni di esperienza</div>
+          </div>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <span class="section-label">Chi Sono</span>
+          <h2 class="section-title">Andrea Damiani</h2>
+          <div class="gold-line"></div>
+          <p class="section-subtitle" style="margin-bottom: 1.5rem;">Life &amp; Business Coach Professionista</p>
+          <div class="about-text">
+            <p>Formatore e Coach Professionista AICP con oltre 20 anni di esperienza in Management ad alto livello sia in ambito pubblico che privato.</p>
+            <p>Attualmente Coach della prima e pi&ugrave; importante Scuola di formazione per aspiranti magistrati &ldquo;Metodo Magistrato&rdquo; guidata dal Consigliere Marco Fratini e responsabile di diversi Progetti strategici di formazione e coaching presso il Vaticano (Ateneo Pontifico Regina Apostolorum &ndash; APRA).</p>
+            <p>Laureato in Scienze della Comunicazione, diplomato presso la scuola di Incoaching, opera secondo le linee guida e Codici Etici ICF &ndash; AICP rispondenti alla Norma UNI 11601:2015.</p>
+            <p><em>&ldquo;Ho deciso di diventare un coach quando nel mio cuore, e nella mia testa, ha fatto capolino, insistente, una domanda: per chi sono?&rdquo;</em></p>
+          </div>
+          <div class="about-credentials">
+            <div class="credential">
+              <i class="fas fa-certificate"></i>
+              <span>Membro AICP</span>
+            </div>
+            <div class="credential">
+              <i class="fas fa-shield-alt"></i>
+              <span>Norma UNI 11601:2015</span>
+            </div>
+            <div class="credential">
+              <i class="fas fa-graduation-cap"></i>
+              <span>Diplomato Incoaching</span>
+            </div>
+            <div class="credential">
+              <i class="fas fa-balance-scale"></i>
+              <span>Codici Etici ICF</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       EXPERIENCE (BACKGROUND)
+       ============================================ -->
+  <section class="section-padding" style="background: var(--bg-primary);">
+    <div class="container-narrow">
+      <div class="reveal" style="text-align:center;">
+        <span class="section-label" style="padding-left:0;">Esperienza</span>
+        <h2 class="section-title">Un Percorso di Eccellenza</h2>
+        <div class="gold-line" style="margin: 1.5rem auto;"></div>
+      </div>
+      <div style="margin-top: 3rem;">
+        <div class="reveal" style="padding: 2rem 0; border-bottom: 1px solid var(--border-light);">
+          <div style="display:flex; justify-content:space-between; align-items:baseline; flex-wrap:wrap; gap:1rem; margin-bottom:1rem;">
+            <h3 style="font-family:var(--font-display); font-size:1.2rem; font-weight:500;">Agenzia Italiana del Farmaco (AIFA)</h3>
+            <span style="font-size:0.75rem; color:var(--text-muted); letter-spacing:0.1em;">13 ANNI</span>
+          </div>
+          <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.7;">Dirigente in Comunicazione con incarichi dirigenziali nazionali e internazionali. Rappresentante italiano per l'implementazione di Direttive Europee. Nominato Responsabile della Trasparenza e dell'Anticorruzione con encomio scritto. Secondo encomio durante il Semestre di Presidenza Italiana dell'UE.</p>
+        </div>
+        <div class="reveal" style="padding: 2rem 0; border-bottom: 1px solid var(--border-light);">
+          <h3 style="font-family:var(--font-display); font-size:1.2rem; font-weight:500; margin-bottom:1rem;">Metodo Magistrato</h3>
+          <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.7;">Coach della prima e pi&ugrave; importante Scuola di formazione per aspiranti magistrati in Italia, guidata dal Consigliere Marco Fratini.</p>
+        </div>
+        <div class="reveal" style="padding: 2rem 0; border-bottom: 1px solid var(--border-light);">
+          <h3 style="font-family:var(--font-display); font-size:1.2rem; font-weight:500; margin-bottom:1rem;">Vaticano &ndash; APRA</h3>
+          <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.7;">Responsabile di progetti strategici di formazione e coaching presso l'Ateneo Pontifico Regina Apostolorum. Executive, corporate e team coaching.</p>
+        </div>
+        <div class="reveal" style="padding: 2rem 0;">
+          <h3 style="font-family:var(--font-display); font-size:1.2rem; font-weight:500; margin-bottom:1rem;">Ulteriori Esperienze</h3>
+          <p style="font-size:0.9rem; color:var(--text-secondary); line-height:1.7;">Consulente comunicazione/coaching presso Gruppo Alpha Omega. Consulente ALD Automotive. Presidente e membro di diverse commissioni d'esame pubbliche. Membro della Commissione Consultiva per licenze pubblicitarie sanitarie e del Comitato Editoriale della &ldquo;Relazione sullo Stato di Salute del Paese&rdquo;.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       MISSION / PHILOSOPHY
+       ============================================ -->
+  <section class="mission section-padding">
+    <div class="container">
+      <div class="mission-content reveal">
+        <span class="section-label" style="padding-left:0; display:block; text-align:center;">Il Coach</span>
+        <p class="mission-quote">&ldquo;La vera forza del coaching sei <span class="highlight">TU</span>&rdquo;</p>
+        <p class="mission-text">Attraverso l'ascolto attivo, ti guider&ograve; verso una nuova prospettiva sui tuoi pensieri e sulle tue situazioni; sosterr&ograve; il miglioramento delle tue prestazioni o la risoluzione di un problema; incoragger&ograve; la tua evoluzione personale verso l'eccellenza e il benessere.</p>
+        <p style="text-align:center; margin-top:1.5rem; color: var(--text-muted); font-size:0.95rem;">Il coach non &egrave; un consulente... non &egrave; neanche un formatore.</p>
+        <div style="text-align:center; margin-top:2rem;">
+          <a href="#contact" class="btn btn-primary">Inizia il tuo percorso <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOUR PILLARS
+       ============================================ -->
+  <section class="section-padding" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div style="text-align:center;" class="reveal">
+        <span class="section-label" style="padding-left:0;">Il Metodo</span>
+        <h2 class="section-title">Quattro Pilastri per il Tuo Cambiamento</h2>
+      </div>
+      <div class="pillars-grid">
+        <div class="pillar reveal">
+          <div class="pillar-icon"><img src="img/siifelice.png" alt="Sii Felice"></div>
+          <h3>Sii Felice</h3>
+          <p>Scopri quali sono i tuoi veri valori e come allinearti a loro.</p>
+        </div>
+        <div class="pillar reveal reveal-delay-1">
+          <div class="pillar-icon"><img src="img/autostima.png" alt="Scopriti"></div>
+          <h3>Scopriti</h3>
+          <p>Potenzia le tue capacit&agrave; richieste dai contesti di appartenenza e di azione.</p>
+        </div>
+        <div class="pillar reveal reveal-delay-2">
+          <div class="pillar-icon"><img src="img/target.png" alt="Migliorati"></div>
+          <h3>Migliorati</h3>
+          <p>Alimenta un processo di miglioramento e di apprendimento continuo.</p>
+        </div>
+        <div class="pillar reveal reveal-delay-3">
+          <div class="pillar-icon"><img src="img/ritmo.png" alt="Vivi Bene"></div>
+          <h3>Vivi Bene</h3>
+          <p>Migliora il rapporto con te stesso e con gli altri. Allineati con il tuo mondo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       COACHING DEFINITION
+       ============================================ -->
+  <section class="definition section-padding">
+    <div class="container">
+      <div class="reveal">
+        <div class="definition-box">
+          <p class="definition-text">Il coaching &egrave; un processo di partnership finalizzato al raggiungimento degli obiettivi definiti con il coachee. L'agire professionale del coach facilita il coachee nel migliorare le prestazioni professionali e personali mediante la valorizzazione e il potenziamento delle sue risorse.</p>
+          <p class="definition-source">Norma UNI 11601:2015</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SERVICES - BUSINESS COACHING
+       ============================================ -->
+  <section class="services section-padding" id="services">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label">Servizi</span>
+        <h2 class="section-title">Business Coaching</h2>
+        <p class="section-subtitle">Un importante punto di riferimento per le aziende e i professionisti che desiderano attivare risorse interne e potenziale nascosto.</p>
+      </div>
+
+      <div class="service-grid" style="margin-top:3rem;">
+        <div class="service-card reveal">
+          <div class="service-card-content">
+            <div class="service-icon"><i class="fas fa-briefcase"></i></div>
+            <h3>Business Coaching</h3>
+            <p>Rivolto a imprenditori, direzione generale, responsabili business unit, team commerciali e professionisti. Valorizzazione e potenziamento delle competenze di chi impatta direttamente sui risultati aziendali.</p>
+          </div>
+        </div>
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-card-content">
+            <div class="service-icon"><i class="fas fa-building"></i></div>
+            <h3>Corporate Coaching</h3>
+            <p>Rivolto a middle management, personale chiave e talenti identificati. Investimento organizzativo nello sviluppo del personale per massimizzare il potenziale dell'intera struttura.</p>
+          </div>
+        </div>
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-card-content">
+            <div class="service-icon"><i class="fas fa-user-tie"></i></div>
+            <h3>Executive Coaching</h3>
+            <p>Coaching individuale per manager e dirigenti. Leadership efficace, gestione del tempo, riduzione dello stress, capacit&agrave; di delega e miglioramento nella gestione dei team.</p>
+          </div>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-card-content">
+            <div class="service-icon"><i class="fas fa-rocket"></i></div>
+            <h3>Career Coaching</h3>
+            <p>Accelerazione dello sviluppo professionale e di carriera attraverso il potenziamento e il rafforzamento delle competenze chiave.</p>
+          </div>
+        </div>
+        <div class="service-card reveal reveal-delay-1">
+          <div class="service-card-content">
+            <div class="service-icon"><i class="fas fa-users"></i></div>
+            <h3>Team Coaching</h3>
+            <p>Transizione dalla competenza individuale alla visione olistica di squadra. Ridefinizione di funzioni, regole e processi per massima sinergia ed efficacia.</p>
+          </div>
+        </div>
+        <div class="service-card reveal reveal-delay-2">
+          <div class="service-card-content">
+            <div class="service-icon"><i class="fas fa-people-arrows"></i></div>
+            <h3>Group Coaching</h3>
+            <p>Coaching one-to-one in contesto di gruppo per il raggiungimento di obiettivi individuali, integrando i benefici del coaching con l'apprendimento tra pari.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Benefits -->
+      <div class="dojo-section reveal" style="margin-top: 3rem;">
+        <h3 style="font-family:var(--font-display); font-size:1.4rem; font-weight:500; margin-bottom:0.5rem;">I Benefici del Business Coaching</h3>
+        <div class="gold-line"></div>
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:2rem; margin-top:2rem;">
+          <div style="display:flex; gap:1rem; align-items:flex-start;">
+            <i class="fas fa-check" style="color:var(--gold); margin-top:0.3rem;"></i>
+            <div><strong style="font-size:0.9rem;">Efficacia</strong><p style="font-size:0.85rem; color:var(--text-secondary); margin-top:0.25rem;">Miglioramento dell'efficacia lavorativa, delle performance in termini di produttivit&agrave; e crescita professionale.</p></div>
+          </div>
+          <div style="display:flex; gap:1rem; align-items:flex-start;">
+            <i class="fas fa-check" style="color:var(--gold); margin-top:0.3rem;"></i>
+            <div><strong style="font-size:0.9rem;">Professionalit&agrave;</strong><p style="font-size:0.85rem; color:var(--text-secondary); margin-top:0.25rem;">Miglioramenti in leadership, comunicazione, pianificazione e negoziazione.</p></div>
+          </div>
+          <div style="display:flex; gap:1rem; align-items:flex-start;">
+            <i class="fas fa-check" style="color:var(--gold); margin-top:0.3rem;"></i>
+            <div><strong style="font-size:0.9rem;">Consapevolezza</strong><p style="font-size:0.85rem; color:var(--text-secondary); margin-top:0.25rem;">Maggiore coscienza dei propri comportamenti personali, professionali e relazionali.</p></div>
+          </div>
+          <div style="display:flex; gap:1rem; align-items:flex-start;">
+            <i class="fas fa-check" style="color:var(--gold); margin-top:0.3rem;"></i>
+            <div><strong style="font-size:0.9rem;">Conoscenza</strong><p style="font-size:0.85rem; color:var(--text-secondary); margin-top:0.25rem;">Migliore regolazione dell'umore e delle emozioni; identificazione degli obiettivi importanti.</p></div>
+          </div>
+          <div style="display:flex; gap:1rem; align-items:flex-start;">
+            <i class="fas fa-check" style="color:var(--gold); margin-top:0.3rem;"></i>
+            <div><strong style="font-size:0.9rem;">Gestione dello Stress</strong><p style="font-size:0.85rem; color:var(--text-secondary); margin-top:0.25rem;">Navigazione dei momenti ad alta tensione, miglioramento nella gestione del tempo e delle priorit&agrave;.</p></div>
+          </div>
+          <div style="display:flex; gap:1rem; align-items:flex-start;">
+            <i class="fas fa-check" style="color:var(--gold); margin-top:0.3rem;"></i>
+            <div><strong style="font-size:0.9rem;">Miglioramento Continuo</strong><p style="font-size:0.85rem; color:var(--text-secondary); margin-top:0.25rem;">Capacit&agrave; di sostenere un processo di miglioramento e apprendimento costante.</p></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Business Dojo -->
+      <div class="dojo-section reveal" style="position:relative; overflow:hidden;">
+        <img src="img/business-dojo.jpg" alt="Business Dojo" style="position:absolute; top:0; right:0; width:300px; height:100%; object-fit:cover; opacity:0.12; mask-image:linear-gradient(to left, rgba(0,0,0,0.3), transparent); -webkit-mask-image:linear-gradient(to left, rgba(0,0,0,0.3), transparent);" loading="lazy">
+        <span class="section-label">Business Dojo</span>
+        <h3 style="font-family:var(--font-display); font-size:1.4rem; font-weight:500; margin-bottom:0.5rem;">Oggi e Domani: la tua crescita professionale</h3>
+        <p style="font-size:0.9rem; color:var(--text-secondary); margin-top:0.5rem;">Corso di Group Coaching (4-6 partecipanti) &mdash; 3 moduli online da 2 ore + sessione individuale iniziale e finale di 1 ora.</p>
+        <div class="dojo-details">
+          <div class="dojo-modules">
+            <div class="dojo-module">
+              <h4>Sessione 1</h4>
+              <p>Autoconsapevolezza e coscienza del potenziale personale + modulo formativo</p>
+            </div>
+            <div class="dojo-module">
+              <h4>Sessione 2</h4>
+              <p>Gestione del tempo + modulo formativo</p>
+            </div>
+            <div class="dojo-module">
+              <h4>Sessione 3</h4>
+              <p>Definizione degli obiettivi e pianificazione dell'azione + modulo formativo</p>
+            </div>
+          </div>
+          <div>
+            <h4 style="font-family:var(--font-display); font-size:1rem; margin-bottom:1rem;">Risultati Attesi</h4>
+            <ul class="dojo-benefits">
+              <li>Maggiore comprensione di s&eacute; e consapevolezza comportamentale</li>
+              <li>Potenziamento delle capacit&agrave; personali e dell'autoefficacia</li>
+              <li>Identificazione obiettivi importanti con allineamento valori-decisioni-comportamenti</li>
+              <li>Navigazione dello stress e miglioramento delle relazioni interpersonali</li>
+            </ul>
+            <div class="pcp-price" style="margin-top:1.5rem;">&euro;320</div>
+            <p style="font-size:0.8rem; color:var(--text-muted); margin-top:0.5rem;">Il corso parte con le prime 4 iscrizioni. Rimborso 100% in caso di indisponibilit&agrave;.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CONCORSI PROFESSIONALI
+       ============================================ -->
+  <section class="section-padding" id="concorsi">
+    <div class="container">
+      <div class="reveal" style="text-align:center;">
+        <span class="section-label" style="padding-left:0;">Concorsi Professionali</span>
+        <h2 class="section-title">Supera le sfide. Raggiungi il successo.</h2>
+        <p class="section-subtitle" style="margin:0 auto; max-width:700px;">Come superare le sfide e raggiungere il successo dei tuoi obiettivi professionali. Il primo e pi&ugrave; importante corso di coaching in Italia per la gestione di tutto ci&ograve; che circonda lo studio e la preparazione ai concorsi professionali.</p>
+      </div>
+
+      <div style="text-align:center; margin-top:2rem;" class="reveal">
+        <img src="img/concorsi.png" alt="Concorsi Professionali - Professional Coaching Program" style="max-width:100%; height:auto; max-height:400px; border:1px solid var(--border); opacity:0.9;" loading="lazy">
+      </div>
+      <div class="pcp-section reveal" style="margin-top: 2rem;">
+        <span class="section-label">P.C.P.</span>
+        <h3 style="font-family:var(--font-display); font-size:1.4rem; font-weight:500;">Professional Coaching Program</h3>
+        <div class="gold-line"></div>
+        <p style="font-size:0.95rem; color:var(--text-secondary); margin-top:1rem; line-height:1.8;">Lo studio &egrave; fondamentale, ma non basta per superare i concorsi professionali. Il successo richiede la gestione di emozioni, pressione, aspettative, frustrazione, paura del fallimento, procrastinazione, perfezionismo e senso di inadeguatezza.</p>
+        <p style="font-size:0.95rem; color:var(--text-secondary); margin-top:1rem; line-height:1.8;">L'obiettivo &egrave; lo sviluppo di una mente calma, chiara, sincronizzata e connessa per arrivare agli esami mentalmente liberi e pronti all'azione.</p>
+
+        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:2rem; margin-top:2.5rem;">
+          <div style="padding:2rem; background:rgba(201,168,76,0.05); border-left:2px solid var(--gold);">
+            <h4 style="font-family:var(--font-display); font-size:1rem; margin-bottom:0.75rem;">Mentalit&agrave; Vincente</h4>
+            <p style="font-size:0.85rem; color:var(--text-secondary);">Attivazione della mentalit&agrave; vincente e sviluppo dell'autoconsapevolezza.</p>
+          </div>
+          <div style="padding:2rem; background:rgba(201,168,76,0.05); border-left:2px solid var(--gold);">
+            <h4 style="font-family:var(--font-display); font-size:1rem; margin-bottom:0.75rem;">Strumenti Pratici</h4>
+            <p style="font-size:0.85rem; color:var(--text-secondary);">Acquisizione di strumenti pratici per gestire le sfide emotive, cognitive e comportamentali.</p>
+          </div>
+          <div style="padding:2rem; background:rgba(201,168,76,0.05); border-left:2px solid var(--gold);">
+            <h4 style="font-family:var(--font-display); font-size:1rem; margin-bottom:0.75rem;">Risorse Gratuite</h4>
+            <p style="font-size:0.85rem; color:var(--text-secondary);">Presentazione PowerPoint con oltre 100 slide, articoli del blog e e-book dedicato (in arrivo).</p>
+          </div>
+        </div>
+
+        <div style="text-align:center; margin-top:2.5rem;">
+          <a href="#contact" class="btn btn-primary">Richiedi informazioni <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       TESTIMONIALS
+       ============================================ -->
+  <section class="testimonials section-padding" id="testimonials">
+    <div class="container">
+      <div class="reveal" style="text-align:center;">
+        <span class="section-label" style="padding-left:0;">Testimonianze</span>
+        <h2 class="section-title">Dicono di Me</h2>
+        <p class="section-subtitle" style="margin:0 auto;">Le parole di chi ha intrapreso un percorso di coaching.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <div class="testimonial-card reveal">
+          <p class="testimonial-text">&ldquo;&hellip;c'&egrave; pi&ugrave; da riconoscere che da conoscere.&rdquo;</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MC</div>
+            <div>
+              <div class="testimonial-name">Maria Chiara</div>
+              <div class="testimonial-role">Candidata Notaio</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-1">
+          <p class="testimonial-text">&ldquo;&hellip;una parola: consapevolezza.&rdquo;</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">M</div>
+            <div>
+              <div class="testimonial-name">Maria</div>
+              <div class="testimonial-role">Candidata Magistrato</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-2">
+          <p class="testimonial-text">&ldquo;&hellip;mi ha aiutato ad abbattere le fragilit&agrave;&rdquo;</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">M</div>
+            <div>
+              <div class="testimonial-name">Marta</div>
+              <div class="testimonial-role">Candidata Magistrato</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal">
+          <p class="testimonial-text">&ldquo;&Egrave; stato un viaggio bellissimo&rdquo;</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">G</div>
+            <div>
+              <div class="testimonial-name">Giulia</div>
+              <div class="testimonial-role">Candidata Magistrato</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-1">
+          <p class="testimonial-text">&ldquo;&hellip;ora, riesco a fidarmi del mio intuito.&rdquo;</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">E</div>
+            <div>
+              <div class="testimonial-name">Elena</div>
+              <div class="testimonial-role">Candidata Magistrato</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card reveal reveal-delay-2">
+          <p class="testimonial-text">&ldquo;&hellip;verso la migliore versione di me stessa.&rdquo;</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">I</div>
+            <div>
+              <div class="testimonial-name">Ilaria</div>
+              <div class="testimonial-role">Candidata Magistrato</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hidden testimonials -->
+      <div class="testimonials-hidden" id="moreTestimonials">
+        <div class="testimonial-card">
+          <p class="testimonial-text">&ldquo;non esiste altro che il mio presente&rdquo;</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">E</div>
+            <div>
+              <div class="testimonial-name">Eleonora</div>
+              <div class="testimonial-role">Candidata Magistrato</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">&ldquo;&hellip;ora sono la parte migliore di me&rdquo;</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">D</div>
+            <div>
+              <div class="testimonial-name">Diana</div>
+              <div class="testimonial-role">Candidata Magistrato</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">&ldquo;&hellip;un viaggio alla riscoperta di me stesso&rdquo;</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">A</div>
+            <div>
+              <div class="testimonial-name">Alfio</div>
+              <div class="testimonial-role">Candidato Notaio</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">&ldquo;&hellip;finalmente cammino a testa alta&rdquo;</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">E</div>
+            <div>
+              <div class="testimonial-name">Eugenia</div>
+              <div class="testimonial-role">Candidata Magistrato</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">&ldquo;Mi ha disorientata presentandomi me stessa&rdquo;</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">M</div>
+            <div>
+              <div class="testimonial-name">Martina</div>
+              <div class="testimonial-role">Candidata Notaio</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">&ldquo;Il percorso con Andrea &egrave; un dono&rdquo;</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">R</div>
+            <div>
+              <div class="testimonial-name">Raffaella</div>
+              <div class="testimonial-role">Candidata Notaio</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">&ldquo;Lui accende il faro che &egrave; in te&hellip;&rdquo;</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">N</div>
+            <div>
+              <div class="testimonial-name">Nicoletta</div>
+              <div class="testimonial-role">Candidata Notaio</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">&ldquo;&hellip;essere una persona migliore&rdquo;</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">G</div>
+            <div>
+              <div class="testimonial-name">Gilda</div>
+              <div class="testimonial-role">Neolaureata</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <p class="testimonial-text">&ldquo;&hellip;al 130%.&rdquo;</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">M</div>
+            <div>
+              <div class="testimonial-name">Maria</div>
+              <div class="testimonial-role">Candidata Notaio</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonials-more">
+        <button class="btn btn-outline" id="showMoreBtn" onclick="toggleTestimonials()">
+          Mostra tutte le testimonianze <i class="fas fa-chevron-down"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       BLOG
+       ============================================ -->
+  <section class="section-padding" id="blog">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label">Blog</span>
+        <h2 class="section-title">Articoli &amp; Approfondimenti</h2>
+        <p class="section-subtitle">Scopri di pi&ugrave; sul mondo del coaching. Dai un'occhiata agli ultimi articoli del blog.</p>
+      </div>
+      <div class="blog-grid">
+        <div class="blog-card reveal">
+          <div class="blog-card-image">
+            <img src="img/concorsi.png" alt="Paura del Fallimento" loading="lazy">
+            <span class="blog-category">Concorsi</span>
+          </div>
+          <div class="blog-card-content">
+            <p class="blog-date">18 Marzo 2024</p>
+            <h3>Affrontare la Paura del Fallimento nei Concorsi Professionali</h3>
+            <p>La paura del fallimento rappresenta una delle difficolt&agrave; pi&ugrave; comuni e bloccanti che chi aspira a superare concorsi professionali deve gestire.</p>
+            <a href="blog/affrontare-la-paura-del-fallimento.html" class="blog-link">Leggi l'articolo <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="blog-card reveal reveal-delay-1">
+          <div class="blog-card-image">
+            <img src="img/idee.jpg" alt="Gestire le Aspettative" loading="lazy">
+            <span class="blog-category">Concorsi</span>
+          </div>
+          <div class="blog-card-content">
+            <p class="blog-date">12 Novembre 2023</p>
+            <h3>Gestire le Aspettative Esterne durante la Preparazione ai Concorsi</h3>
+            <p>Le aspettative di familiari e colleghi creano stress per i candidati ai concorsi professionali.</p>
+            <a href="blog/gestire-le-aspettative-esterne.html" class="blog-link">Leggi l'articolo <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="blog-card reveal reveal-delay-2">
+          <div class="blog-card-image">
+            <img src="img/business-coaching.jpg" alt="Senso di Inadeguatezza" loading="lazy">
+            <span class="blog-category">Concorsi</span>
+          </div>
+          <div class="blog-card-content">
+            <p class="blog-date">7 Ottobre 2022</p>
+            <h3>Affrontare il Senso di Inadeguatezza durante la Preparazione ai Concorsi</h3>
+            <p>Dubbio di s&eacute;, insicurezza e bassa autostima che influenzano la motivazione dei candidati.</p>
+            <a href="blog/senso-di-inadeguatezza.html" class="blog-link">Leggi l'articolo <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="blog-card reveal">
+          <div class="blog-card-image">
+            <img src="img/life-coaching.jpg" alt="Coaching avventura" loading="lazy">
+            <span class="blog-category">Coaching</span>
+          </div>
+          <div class="blog-card-content">
+            <p class="blog-date">7 Giugno 2021</p>
+            <h3>Il Coaching: un'avventura da adulti</h3>
+            <p>Accompagnare i clienti dalla situazione presente al risultato desiderato attraverso un percorso di consapevolezza.</p>
+            <a href="blog/il-coaching-unavventura-da-adulti.html" class="blog-link">Leggi l'articolo <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="blog-card reveal reveal-delay-1">
+          <div class="blog-card-image">
+            <img src="img/blog-cover.jpg" alt="Coaching e riposo" loading="lazy">
+            <span class="blog-category">Coaching</span>
+          </div>
+          <div class="blog-card-content">
+            <p class="blog-date">14 Maggio 2021</p>
+            <h3>Coaching e riposo: vivi col giusto ritmo</h3>
+            <p>La vita ha un ritmo; rispettarlo crea un vivere significativo rispetto alla trascuratezza.</p>
+            <a href="blog/coaching-e-riposo.html" class="blog-link">Leggi l'articolo <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+        <div class="blog-card reveal reveal-delay-2">
+          <div class="blog-card-image">
+            <img src="img/hero-bg.jpg" alt="Sfide della vita" loading="lazy">
+            <span class="blog-category">Coaching</span>
+          </div>
+          <div class="blog-card-content">
+            <p class="blog-date">22 Marzo 2021</p>
+            <h3>Come affrontare le sfide della vita</h3>
+            <p>Obiettivi, esami e traguardi creano pressione: guida alla gestione dello stress.</p>
+            <a href="blog/come-affrontare-le-sfide-della-vita.html" class="blog-link">Leggi l'articolo <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:3rem;" class="reveal">
+        <a href="blog/3-approcci-per-essere-felici-nel-lavoro.html" class="btn btn-outline">Altri articoli del blog <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       VIDEO
+       ============================================ -->
+  <section class="video-section section-padding" id="video">
+    <div class="container">
+      <div class="reveal">
+        <span class="section-label">Video</span>
+        <h2 class="section-title">Video &amp; Interviste</h2>
+        <p class="section-subtitle">Pillole di coaching, interviste e interventi formativi.</p>
+      </div>
+      <div class="video-grid">
+        <a href="blog/sessione-zero-gratuita.html" class="video-card reveal" style="text-decoration:none; color:inherit;">
+          <div class="video-thumb">
+            <img src="img/video-thumb-3.png" alt="Sessione Zero" loading="lazy">
+            <div class="video-play"><i class="fas fa-play" style="margin-left:3px;"></i></div>
+          </div>
+          <div class="video-info">
+            <h3>Sessione Zero gratuita: facciamo chiarezza</h3>
+            <p>21 Maggio 2021</p>
+          </div>
+        </a>
+        <a href="blog/intervista-radio-news-24.html" class="video-card reveal reveal-delay-1" style="text-decoration:none; color:inherit;">
+          <div class="video-thumb">
+            <img src="img/video-thumb-2.jpg" alt="Intervista Radio News 24" loading="lazy">
+            <div class="video-play"><i class="fas fa-play" style="margin-left:3px;"></i></div>
+          </div>
+          <div class="video-info">
+            <h3>Intervista Radio News 24</h3>
+            <p>3 Maggio 2021</p>
+          </div>
+        </a>
+        <a href="blog/pillole-di-coaching-adesso.html" class="video-card reveal reveal-delay-2" style="text-decoration:none; color:inherit;">
+          <div class="video-thumb">
+            <img src="img/video-thumb-1.jpg" alt="Pillole di Coaching Adesso" loading="lazy">
+            <div class="video-play"><i class="fas fa-play" style="margin-left:3px;"></i></div>
+          </div>
+          <div class="video-info">
+            <h3>Pillole di Coaching | Adesso</h3>
+            <p>Video Coaching</p>
+          </div>
+        </a>
+        <a href="blog/pillole-di-coaching-ritmo.html" class="video-card reveal" style="text-decoration:none; color:inherit;">
+          <div class="video-thumb">
+            <img src="img/business-dojo.jpg" alt="Pillole di Coaching Ritmo" loading="lazy">
+            <div class="video-play"><i class="fas fa-play" style="margin-left:3px;"></i></div>
+          </div>
+          <div class="video-info">
+            <h3>Pillole di Coaching | Ritmo</h3>
+            <p>Video Coaching</p>
+          </div>
+        </a>
+        <a href="blog/pillole-di-coaching-coach-come-sostantivo.html" class="video-card reveal reveal-delay-1" style="text-decoration:none; color:inherit;">
+          <div class="video-thumb">
+            <img src="img/life-coaching.jpg" alt="Coach come sostantivo" loading="lazy">
+            <div class="video-play"><i class="fas fa-play" style="margin-left:3px;"></i></div>
+          </div>
+          <div class="video-info">
+            <h3>Pillole di Coaching | Coach come sostantivo</h3>
+            <p>Video Coaching</p>
+          </div>
+        </a>
+        <a href="blog/pillole-di-coaching-obiettivi.html" class="video-card reveal reveal-delay-2" style="text-decoration:none; color:inherit;">
+          <div class="video-thumb">
+            <img src="img/blog-cover.jpg" alt="Pillole di Coaching Obiettivi" loading="lazy">
+            <div class="video-play"><i class="fas fa-play" style="margin-left:3px;"></i></div>
+          </div>
+          <div class="video-info">
+            <h3>Pillole di Coaching | Obiettivi</h3>
+            <p>Video Coaching</p>
+          </div>
+        </a>
+      </div>
+      <div style="text-align:center; margin-top:3rem;" class="reveal">
+        <a href="blog/intervento-radio-revolution.html" class="btn btn-outline">Altri video e interviste <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CONTACT
+       ============================================ -->
+  <section class="contact section-padding" id="contact">
+    <div class="container">
+      <div class="reveal" style="text-align:center;">
+        <span class="section-label" style="padding-left:0;">Contatti</span>
+        <h2 class="section-title">Inizia il Tuo Percorso</h2>
+        <p class="section-subtitle" style="margin:0 auto;">Affidati ad un coach per raggiungere il futuro che desideri.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="reveal">
+          <div class="contact-info">
+            <h3>Parliamone</h3>
+            <p>Contattami per informazioni sul Professional Coaching Program e per accedere agli strumenti gratuiti. Siamo qui per aiutarti a realizzare il tuo pieno potenziale e raggiungere i tuoi obiettivi professionali.</p>
+
+            <div class="contact-detail">
+              <div class="contact-detail-icon"><i class="fas fa-phone"></i></div>
+              <div class="contact-detail-text">
+                <span class="label">Telefono</span>
+                <a href="tel:+393398622626">+39 339 862 2626</a>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-detail-text">
+                <span class="label">Email</span>
+                <a href="mailto:info@andreadamianicoach.it">info@andreadamianicoach.it</a>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon"><i class="fas fa-calendar-check"></i></div>
+              <div class="contact-detail-text">
+                <span class="label">Sessione Zero Gratuita</span>
+                <a href="https://calendly.com" target="_blank">Prenota su Calendly</a>
+              </div>
+            </div>
+
+            <div class="contact-social">
+              <a href="https://www.facebook.com/andreadamianicoach/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.linkedin.com/in/andrea-damiani-coaching-4741ab50/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://www.instagram.com/andreadamianicoaching/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://www.youtube.com/@andreadamianicoach" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal reveal-delay-2">
+          <form class="contact-form" onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Nome e Cognome</label>
+                <input type="text" id="name" name="name" required placeholder="Il tuo nome">
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="La tua email">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="phone">Telefono</label>
+              <input type="tel" id="phone" name="phone" required placeholder="Il tuo numero">
+            </div>
+            <div class="form-group">
+              <label for="message">Messaggio</label>
+              <textarea id="message" name="message" required placeholder="Come posso aiutarti?"></textarea>
+            </div>
+            <p class="form-privacy">
+              Inviando questo form acconsento al trattamento dei miei dati personali in ottemperanza al Regolamento UE 679/2016.
+              <a href="#">Privacy Policy</a>
+            </p>
+            <button type="submit" class="btn btn-primary" style="align-self:flex-start;">
+              Invia messaggio <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand" style="display:flex; align-items:center; gap:0.75rem;">
+            <img src="img/logo.png" alt="Logo" style="height:40px; width:auto;">
+            <span>Andrea <span style="color:var(--gold);">Damiani</span></span>
+          </div>
+          <p class="footer-desc">Life &amp; Business Coach Professionista. Aiuto le persone impegnate nelle sfide della vita a passare dallo stato attuale a quello ideale.</p>
+          <div class="contact-social" style="margin-top:1.5rem;">
+            <a href="https://www.facebook.com/andreadamianicoach/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/in/andrea-damiani-coaching-4741ab50/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/andreadamianicoaching/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@andreadamianicoach" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4>Navigazione</h4>
+          <ul class="footer-links">
+            <li><a href="#about">Chi Sono</a></li>
+            <li><a href="#services">Business Coaching</a></li>
+            <li><a href="#concorsi">Concorsi Professionali</a></li>
+            <li><a href="#testimonials">Testimonianze</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#video">Video</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contatti</h4>
+          <ul class="footer-links">
+            <li><a href="tel:+393398622626">+39 339 862 2626</a></li>
+            <li><a href="mailto:info@andreadamianicoach.it">info@andreadamianicoach.it</a></li>
+            <li><a href="#contact">Prenota una sessione</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; Andrea Damiani &mdash; Partita IVA 15856321003</p>
+        <div class="footer-legal">
+          Socio della Associazione Italiana Coach Professionisti (AICP)<br>
+          Professione disciplinata dalla Legge 14/01/2013, n.4<br>
+          <a href="#" style="color:var(--gold);">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       WHATSAPP FLOATING BUTTON
+       ============================================ -->
+  <a href="https://wa.me/393398622626?text=Ciao%20Andrea%2C%20vorrei%20informazioni%20sui%20tuoi%20servizi%20di%20coaching."
+     class="whatsapp-float"
+     target="_blank"
+     aria-label="Contattami su WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- ============================================
+       JAVASCRIPT
+       ============================================ -->
+  <script>
+    // === NAVBAR SCROLL ===
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // === MOBILE MENU ===
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      menuToggle.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navLinks.classList.remove('open');
+      });
+    });
+
+    // === REVEAL ON SCROLL ===
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    revealElements.forEach(el => revealObserver.observe(el));
+
+    // === COUNTER ANIMATION ===
+    const counters = document.querySelectorAll('.stat-number');
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseInt(el.dataset.target);
+          const suffix = el.dataset.suffix || '';
+          const duration = 2000;
+          const start = performance.now();
+
+          function update(now) {
+            const elapsed = now - start;
+            const progress = Math.min(elapsed / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const current = Math.round(eased * target);
+            el.textContent = current.toLocaleString('it-IT') + suffix;
+            if (progress < 1) requestAnimationFrame(update);
+          }
+          requestAnimationFrame(update);
+          counterObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+    counters.forEach(c => counterObserver.observe(c));
+
+    // === TOGGLE TESTIMONIALS ===
+    function toggleTestimonials() {
+      const hidden = document.getElementById('moreTestimonials');
+      const btn = document.getElementById('showMoreBtn');
+      hidden.classList.toggle('show');
+      if (hidden.classList.contains('show')) {
+        btn.innerHTML = 'Mostra meno <i class="fas fa-chevron-up"></i>';
+      } else {
+        btn.innerHTML = 'Mostra tutte le testimonianze <i class="fas fa-chevron-down"></i>';
+      }
+    }
+
+    // === FORM HANDLER ===
+    function handleSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const phone = document.getElementById('phone').value;
+      const message = document.getElementById('message').value;
+      const mailtoLink = `mailto:info@andreadamianicoach.it?subject=Richiesta%20informazioni%20da%20${encodeURIComponent(name)}&body=${encodeURIComponent(`Nome: ${name}\nEmail: ${email}\nTelefono: ${phone}\n\n${message}`)}`;
+      window.location.href = mailtoLink;
+    }
+
+    // === SMOOTH SCROLL ===
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          const offset = 80;
+          const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

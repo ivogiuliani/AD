@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Come affrontare le sfide della vita | Andrea Damiani Coach</title>
+  <link rel="icon" type="image/png" href="../img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg-primary: #0a0a0a;
+      --bg-secondary: #111111;
+      --bg-tertiary: #1a1a1a;
+      --bg-card: #141414;
+      --gold: #c9a84c;
+      --gold-light: #dfc06e;
+      --text-primary: #f5f0e8;
+      --text-secondary: #b0a89e;
+      --text-muted: #7a746c;
+      --border: rgba(201, 168, 76, 0.12);
+      --border-light: rgba(255, 255, 255, 0.06);
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Inter', -apple-system, sans-serif;
+      --font-accent: 'Cormorant Garamond', Georgia, serif;
+    }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::selection { background: var(--gold); color: var(--bg-primary); }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg-primary); }
+    ::-webkit-scrollbar-thumb { background: rgba(201,168,76,0.4); border-radius: 3px; }
+
+    /* Nav */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(10, 10, 10, 0.95);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      padding: 0.8rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      max-width: 1300px; margin: 0 auto; padding: 0 2rem;
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 0.75rem; text-decoration: none;
+    }
+    .nav-logo img { height: 36px; width: auto; }
+    .nav-logo-text {
+      font-family: var(--font-display); font-size: 1.3rem; font-weight: 500;
+      color: var(--text-primary); letter-spacing: 0.02em;
+    }
+    .nav-logo-text span { color: var(--gold); }
+    .nav-back {
+      font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--text-secondary); text-decoration: none;
+      transition: color 0.3s; display: flex; align-items: center; gap: 0.5rem;
+    }
+    .nav-back:hover { color: var(--gold); }
+
+    /* Article */
+    .article-header {
+      padding: 8rem 2rem 3rem; text-align: center;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border);
+    }
+    .article-category {
+      display: inline-block; font-size: 0.7rem; font-weight: 600;
+      letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .article-title {
+      font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 500; line-height: 1.3; max-width: 800px; margin: 0 auto 1.5rem;
+    }
+    .article-meta {
+      font-size: 0.8rem; color: var(--text-muted); letter-spacing: 0.05em;
+    }
+    .article-meta i { color: var(--gold); margin-right: 0.3rem; }
+    .article-body {
+      max-width: 750px; margin: 0 auto; padding: 3rem 2rem 5rem;
+    }
+    .article-body p {
+      color: var(--text-secondary); font-size: 1rem; line-height: 1.9;
+      margin-bottom: 1.5rem;
+    }
+    .article-body h2 {
+      font-family: var(--font-display); font-size: 1.6rem; font-weight: 500;
+      margin: 2.5rem 0 1rem; color: var(--text-primary);
+    }
+    .article-body h3 {
+      font-family: var(--font-display); font-size: 1.3rem; font-weight: 500;
+      margin: 2rem 0 0.75rem; color: var(--text-primary);
+    }
+    .article-body h4 {
+      font-family: var(--font-display); font-size: 1.1rem; font-weight: 500;
+      margin: 1.5rem 0 0.75rem; color: var(--gold);
+    }
+    .article-body blockquote {
+      border-left: 2px solid var(--gold); padding: 1rem 1.5rem; margin: 2rem 0;
+      background: rgba(201,168,76,0.05); font-style: italic;
+      color: var(--text-secondary);
+    }
+    .article-body ul, .article-body ol {
+      margin: 1rem 0 1.5rem 1.5rem; color: var(--text-secondary);
+    }
+    .article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-body strong { color: var(--text-primary); }
+    .article-body em { color: var(--gold-light); }
+
+    /* CTA Box */
+    .cta-box {
+      background: var(--bg-card); border: 1px solid var(--border);
+      padding: 2.5rem; text-align: center; margin-top: 3rem;
+    }
+    .cta-box h3 {
+      font-family: var(--font-display); font-size: 1.4rem; margin-bottom: 1rem;
+    }
+    .cta-box p { color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem; }
+    .cta-box .btn {
+      display: inline-flex; align-items: center; gap: 0.75rem;
+      padding: 1rem 2.5rem; font-family: var(--font-body);
+      font-size: 0.8rem; font-weight: 600; letter-spacing: 0.15em;
+      text-transform: uppercase; text-decoration: none;
+      background: var(--gold); color: var(--bg-primary);
+      transition: all 0.4s; border: none; cursor: pointer;
+    }
+    .cta-box .btn:hover {
+      background: var(--gold-light); transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(201, 168, 76, 0.3);
+    }
+    .contact-links {
+      display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .contact-links a {
+      color: var(--text-secondary); text-decoration: none; font-size: 0.85rem;
+      display: flex; align-items: center; gap: 0.5rem; transition: color 0.3s;
+    }
+    .contact-links a:hover { color: var(--gold); }
+    .contact-links i { color: var(--gold); }
+
+    /* Footer */
+    .footer-mini {
+      background: var(--bg-secondary); border-top: 1px solid var(--border);
+      padding: 2rem; text-align: center;
+    }
+    .footer-mini p { font-size: 0.75rem; color: var(--text-muted); }
+    .footer-mini a { color: var(--gold); text-decoration: none; }
+
+    /* WhatsApp */
+    .whatsapp-float {
+      position: fixed; bottom: 2rem; right: 2rem; z-index: 999;
+      width: 56px; height: 56px; background: #25d366; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: white; font-size: 1.6rem; text-decoration: none;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); transition: all 0.3s;
+    }
+    .whatsapp-float:hover { transform: scale(1.1); }
+
+    /* Video embed */
+    .video-embed {
+      position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;
+      margin: 2rem 0; border: 1px solid var(--border);
+    }
+    .video-embed iframe {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    }
+    .video-placeholder {
+      aspect-ratio: 16/9; background: var(--bg-tertiary);
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 1rem; margin: 2rem 0;
+      border: 1px solid var(--border); color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+    .video-placeholder i { font-size: 3rem; color: var(--gold); opacity: 0.5; }
+
+    @media (max-width: 768px) {
+      .article-body { padding: 2rem 1.25rem 3rem; }
+      .contact-links { flex-direction: column; align-items: center; }
+    }
+  
+    /* Mobile improvements */
+    * { -webkit-tap-highlight-color: transparent; }
+    html { -webkit-text-size-adjust: 100%; }
+    body { overflow-wrap: break-word; word-break: break-word; }
+    img { max-width: 100%; height: auto; }
+
+    @media (max-width: 480px) {
+      .article-header { padding: 7rem 1rem 2rem; }
+      .article-title { font-size: 1.5rem; }
+      .article-body { padding: 1.5rem 1rem 3rem; }
+      .article-body h2 { font-size: 1.3rem; }
+      .article-body h3 { font-size: 1.1rem; }
+      .cta-box { padding: 1.5rem 1rem; }
+      .cta-box .btn { padding: 0.9rem 1.5rem; font-size: 0.72rem; }
+      .contact-links { gap: 1rem; }
+      .nav-logo-text { font-size: 1rem; }
+      .nav-logo img { height: 28px; }
+      .whatsapp-float { width: 50px; height: 50px; font-size: 1.4rem; bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px)); right: 1rem; }
+      .video-embed { margin: 1rem -1rem; width: calc(100% + 2rem); }
+    }
+
+    @media (max-width: 360px) {
+      .article-title { font-size: 1.3rem; }
+      .article-header { padding: 6.5rem 0.75rem 1.5rem; }
+      .article-body { padding: 1.25rem 0.75rem 2.5rem; }
+    }
+
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../site.html" class="nav-logo">
+        <img src="../img/logo.png" alt="Logo">
+        <span class="nav-logo-text">Andrea <span>Damiani</span></span>
+      </a>
+      <a href="../site.html#blog" class="nav-back"><i class="fas fa-arrow-left"></i> Torna al sito</a>
+    </div>
+  </nav>
+
+  <header class="article-header">
+    <span class="article-category">Coaching</span>
+    <h1 class="article-title">Come affrontare le sfide della vita</h1>
+    <p class="article-meta"><i class="far fa-calendar"></i> 22 Marzo 2021 &nbsp;&middot;&nbsp; <i class="far fa-user"></i> Andrea Damiani</p>
+  </header>
+
+  <article class="article-body">
+    
+<p>Un traguardo da raggiungere, un esame da sostenere&hellip; Gli obiettivi che ci prefissiamo possono metterci pressione, portare stress o ansia.</p>
+
+<p>In questo articolo, un estratto dell'intervento di qualche settimana fa dedicato agli aspiranti Magistrati del corso di formazione &ldquo;Metodo Magistrato&rdquo; del Consigliere Marco Fratini proprio sulla gestione della tensione che precede il momento.</p>
+
+<p>Di seguito alcuni passaggi fondamentali del mio intervento che prevede l'attivazione di <strong>3 passi specifici</strong> da mettere in campo che mi piace riportare anche a vantaggio di tutti quelli che si trovano a vivere una sfida importante della propria vita.</p>
+
+<h2>Primo Passo: L'Allegria</h2>
+
+<blockquote>&ldquo;Tutti gli esseri umani vengono al mondo con una precisa immagine ontologica. Ogni persona dovrebbe considerare la propria vocazione come il dato fondamentale della sua esistenza e, una volta riconosciuta, sviluppare la propria vita di conseguenza, determinando il proprio destino sulla terra.&rdquo; &mdash; James Hillman, Teoria della ghianda</blockquote>
+
+<p>L'incarnare o meno l'idea di se stesso, cio&egrave; la propria vocazione, &egrave; la domanda interiore pi&ugrave; decisiva che ognuno di noi dovrebbe porsi perch&eacute; la scelta di vivere coerentemente la propria vocazione &egrave; il principio da cui dipende la risposta alla domanda: che senso ha la mia vita?</p>
+
+<p>Ma prima di capire questo c'&egrave; un altro passaggio fondamentale da interiorizzare e fare proprio. La mia prima missione, la tua prima missione, la nostra prima missione &egrave; <strong>VIVERE! ESSERE FELICI DI VIVERE!</strong> Sembra scontato ma non lo &egrave; mai! Se la vita non sgorga da una intuizione felice della mia esistenza, se non mi apro al fatto che la mia vita &egrave; bella e viaggia verso qualcosa di meraviglioso, se non credo alla bont&agrave; della mia vita, potr&ograve; anche capire cosa voglio fare veramente ma lo far&ograve; con il freno a mano tirato.</p>
+
+<p>L'allegria &egrave; una dimensione che devo allenare ed &egrave; una grande notizia questa.</p>
+
+<h2>Secondo Passo: La Motivazione</h2>
+
+<p>La motivazione &egrave; ci&ograve; che attiva il comportamento; &egrave; la ragione che da avvio e sostiene l'azione umana.</p>
+
+<p>Quando esiste una motivazione, ma la sua origine proviene dall'esterno, si parla di <strong>motivazione estrinseca</strong> e i motivi all'azione dell'individuo sono sollecitati attraverso un sistema di premi e punizioni. Il motore della mobilit&agrave; innescato da una motivazione estrinseca produce indubbiamente una prestazione, ma non permette di esprimere il massimo del proprio potenziale.</p>
+
+<p>Quando in una persona la domanda sul perch&eacute; di un comportamento trova la risposta in una molla interna si parla di <strong>motivazione intrinseca</strong>. A differenza della motivazione estrinseca, a sollecitare un'azione non sar&agrave; un premio e neanche una punizione, ma la spinta all'allineamento al proprio essere.</p>
+
+<p>I fattori principali che determinano quanta motivazione interna c'&egrave; dietro una competenza sono:</p>
+<ul>
+  <li>soddisfazione</li>
+  <li>sfida</li>
+  <li>sviluppo</li>
+  <li>senso</li>
+</ul>
+
+<h2>Terzo Passo: L'arte del &ldquo;nient'altro che&hellip;&rdquo;</h2>
+
+<p>Dimenticate durante la vostra giornata di studio per un po', la vostra Situazione di Vita (studiare, vivere per esame) e prestate attenzione alla vostra <strong>Vita</strong>. La vostra Vita &egrave; adesso!!! La vostra situazione di vita &egrave; creata dalla mente, la vostra vita &egrave; adesso.</p>
+
+<p>Trovate il passaggio stretto che conduce alla Vita. Si chiama <strong>ADESSO</strong>. Restringete la vostra vita a questo momento. La vostra situazione di vita pu&ograve; essere piena di problemi (tutte le sono) ma cercate di scoprire se avete qualche problema in questo momento. Non domani o fra 10 minuti, ma adesso.</p>
+
+<p>Libera l'azione con il passo del &ldquo;nient'altro che&rdquo;: incomincia a praticare questo passo dapprima in piccole porzioni della tua giornata: nient'altro che mangiare, nient'altro che camminare, nient'altro che parlare con amico/a. Nient'altro che quello che stai facendo&hellip; questa attitudine metter&agrave; ordine nei tuoi pensieri, nelle tue azioni, nella tua autonomia e vivrai in modo ordinato non vivendo pi&ugrave; in ansia ma finalmente padrone del tuo mondo interiore.</p>
+
+
+    <div class="cta-box">
+      <h3>Ora tocca a te</h3>
+      <p>Prenota la tua call conoscitiva gratuita per iniziare il tuo percorso verso il successo.</p>
+      <a href="../site.html#contact" class="btn">Contattami <i class="fas fa-arrow-right"></i></a>
+      <div class="contact-links">
+        <a href="tel:+393398622626"><i class="fas fa-phone"></i> +39 339 862 2626</a>
+        <a href="mailto:info@andreadamianicoach.it"><i class="fas fa-envelope"></i> info@andreadamianicoach.it</a>
+        <a href="https://wa.me/393398622626" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
+  </article>
+
+  <footer class="footer-mini">
+    <p>&copy; Andrea Damiani &mdash; P.IVA 15856321003 | <a href="../site.html">Torna alla Home</a></p>
+  </footer>
+
+  <a href="https://wa.me/393398622626?text=Ciao%20Andrea%2C%20vorrei%20informazioni%20sui%20tuoi%20servizi%20di%20coaching."
+     class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</body>
+</html>

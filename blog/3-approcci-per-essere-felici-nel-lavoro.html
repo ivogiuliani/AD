@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3 approcci per essere felici nel proprio lavoro | Andrea Damiani Coach</title>
+  <link rel="icon" type="image/png" href="../img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg-primary: #0a0a0a;
+      --bg-secondary: #111111;
+      --bg-tertiary: #1a1a1a;
+      --bg-card: #141414;
+      --gold: #c9a84c;
+      --gold-light: #dfc06e;
+      --text-primary: #f5f0e8;
+      --text-secondary: #b0a89e;
+      --text-muted: #7a746c;
+      --border: rgba(201, 168, 76, 0.12);
+      --border-light: rgba(255, 255, 255, 0.06);
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body: 'Inter', -apple-system, sans-serif;
+      --font-accent: 'Cormorant Garamond', Georgia, serif;
+    }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      font-family: var(--font-body);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::selection { background: var(--gold); color: var(--bg-primary); }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg-primary); }
+    ::-webkit-scrollbar-thumb { background: rgba(201,168,76,0.4); border-radius: 3px; }
+
+    /* Nav */
+    .nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: rgba(10, 10, 10, 0.95);
+      backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+      padding: 0.8rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      max-width: 1300px; margin: 0 auto; padding: 0 2rem;
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 0.75rem; text-decoration: none;
+    }
+    .nav-logo img { height: 36px; width: auto; }
+    .nav-logo-text {
+      font-family: var(--font-display); font-size: 1.3rem; font-weight: 500;
+      color: var(--text-primary); letter-spacing: 0.02em;
+    }
+    .nav-logo-text span { color: var(--gold); }
+    .nav-back {
+      font-size: 0.78rem; font-weight: 500; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--text-secondary); text-decoration: none;
+      transition: color 0.3s; display: flex; align-items: center; gap: 0.5rem;
+    }
+    .nav-back:hover { color: var(--gold); }
+
+    /* Article */
+    .article-header {
+      padding: 8rem 2rem 3rem; text-align: center;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border);
+    }
+    .article-category {
+      display: inline-block; font-size: 0.7rem; font-weight: 600;
+      letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold);
+      margin-bottom: 1rem;
+    }
+    .article-title {
+      font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 500; line-height: 1.3; max-width: 800px; margin: 0 auto 1.5rem;
+    }
+    .article-meta {
+      font-size: 0.8rem; color: var(--text-muted); letter-spacing: 0.05em;
+    }
+    .article-meta i { color: var(--gold); margin-right: 0.3rem; }
+    .article-body {
+      max-width: 750px; margin: 0 auto; padding: 3rem 2rem 5rem;
+    }
+    .article-body p {
+      color: var(--text-secondary); font-size: 1rem; line-height: 1.9;
+      margin-bottom: 1.5rem;
+    }
+    .article-body h2 {
+      font-family: var(--font-display); font-size: 1.6rem; font-weight: 500;
+      margin: 2.5rem 0 1rem; color: var(--text-primary);
+    }
+    .article-body h3 {
+      font-family: var(--font-display); font-size: 1.3rem; font-weight: 500;
+      margin: 2rem 0 0.75rem; color: var(--text-primary);
+    }
+    .article-body h4 {
+      font-family: var(--font-display); font-size: 1.1rem; font-weight: 500;
+      margin: 1.5rem 0 0.75rem; color: var(--gold);
+    }
+    .article-body blockquote {
+      border-left: 2px solid var(--gold); padding: 1rem 1.5rem; margin: 2rem 0;
+      background: rgba(201,168,76,0.05); font-style: italic;
+      color: var(--text-secondary);
+    }
+    .article-body ul, .article-body ol {
+      margin: 1rem 0 1.5rem 1.5rem; color: var(--text-secondary);
+    }
+    .article-body li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-body strong { color: var(--text-primary); }
+    .article-body em { color: var(--gold-light); }
+
+    /* CTA Box */
+    .cta-box {
+      background: var(--bg-card); border: 1px solid var(--border);
+      padding: 2.5rem; text-align: center; margin-top: 3rem;
+    }
+    .cta-box h3 {
+      font-family: var(--font-display); font-size: 1.4rem; margin-bottom: 1rem;
+    }
+    .cta-box p { color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem; }
+    .cta-box .btn {
+      display: inline-flex; align-items: center; gap: 0.75rem;
+      padding: 1rem 2.5rem; font-family: var(--font-body);
+      font-size: 0.8rem; font-weight: 600; letter-spacing: 0.15em;
+      text-transform: uppercase; text-decoration: none;
+      background: var(--gold); color: var(--bg-primary);
+      transition: all 0.4s; border: none; cursor: pointer;
+    }
+    .cta-box .btn:hover {
+      background: var(--gold-light); transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(201, 168, 76, 0.3);
+    }
+    .contact-links {
+      display: flex; justify-content: center; gap: 2rem; margin-top: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .contact-links a {
+      color: var(--text-secondary); text-decoration: none; font-size: 0.85rem;
+      display: flex; align-items: center; gap: 0.5rem; transition: color 0.3s;
+    }
+    .contact-links a:hover { color: var(--gold); }
+    .contact-links i { color: var(--gold); }
+
+    /* Footer */
+    .footer-mini {
+      background: var(--bg-secondary); border-top: 1px solid var(--border);
+      padding: 2rem; text-align: center;
+    }
+    .footer-mini p { font-size: 0.75rem; color: var(--text-muted); }
+    .footer-mini a { color: var(--gold); text-decoration: none; }
+
+    /* WhatsApp */
+    .whatsapp-float {
+      position: fixed; bottom: 2rem; right: 2rem; z-index: 999;
+      width: 56px; height: 56px; background: #25d366; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: white; font-size: 1.6rem; text-decoration: none;
+      box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); transition: all 0.3s;
+    }
+    .whatsapp-float:hover { transform: scale(1.1); }
+
+    /* Video embed */
+    .video-embed {
+      position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;
+      margin: 2rem 0; border: 1px solid var(--border);
+    }
+    .video-embed iframe {
+      position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    }
+    .video-placeholder {
+      aspect-ratio: 16/9; background: var(--bg-tertiary);
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 1rem; margin: 2rem 0;
+      border: 1px solid var(--border); color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+    .video-placeholder i { font-size: 3rem; color: var(--gold); opacity: 0.5; }
+
+    @media (max-width: 768px) {
+      .article-body { padding: 2rem 1.25rem 3rem; }
+      .contact-links { flex-direction: column; align-items: center; }
+    }
+  
+    /* Mobile improvements */
+    * { -webkit-tap-highlight-color: transparent; }
+    html { -webkit-text-size-adjust: 100%; }
+    body { overflow-wrap: break-word; word-break: break-word; }
+    img { max-width: 100%; height: auto; }
+
+    @media (max-width: 480px) {
+      .article-header { padding: 7rem 1rem 2rem; }
+      .article-title { font-size: 1.5rem; }
+      .article-body { padding: 1.5rem 1rem 3rem; }
+      .article-body h2 { font-size: 1.3rem; }
+      .article-body h3 { font-size: 1.1rem; }
+      .cta-box { padding: 1.5rem 1rem; }
+      .cta-box .btn { padding: 0.9rem 1.5rem; font-size: 0.72rem; }
+      .contact-links { gap: 1rem; }
+      .nav-logo-text { font-size: 1rem; }
+      .nav-logo img { height: 28px; }
+      .whatsapp-float { width: 50px; height: 50px; font-size: 1.4rem; bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px)); right: 1rem; }
+      .video-embed { margin: 1rem -1rem; width: calc(100% + 2rem); }
+    }
+
+    @media (max-width: 360px) {
+      .article-title { font-size: 1.3rem; }
+      .article-header { padding: 6.5rem 0.75rem 1.5rem; }
+      .article-body { padding: 1.25rem 0.75rem 2.5rem; }
+    }
+
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../site.html" class="nav-logo">
+        <img src="../img/logo.png" alt="Logo">
+        <span class="nav-logo-text">Andrea <span>Damiani</span></span>
+      </a>
+      <a href="../site.html#blog" class="nav-back"><i class="fas fa-arrow-left"></i> Torna al sito</a>
+    </div>
+  </nav>
+
+  <header class="article-header">
+    <span class="article-category">Coaching</span>
+    <h1 class="article-title">3 approcci per essere felici nel proprio lavoro</h1>
+    <p class="article-meta"><i class="far fa-calendar"></i> 12 Febbraio 2021 &nbsp;&middot;&nbsp; <i class="far fa-user"></i> Andrea Damiani</p>
+  </header>
+
+  <article class="article-body">
+    
+<p>&ldquo;Quando otterr&ograve; una promozione sar&ograve; felice&rdquo;. &ldquo;Quando raggiunger&ograve; il mio target di vendite mi sentir&ograve; appagato&rdquo;.</p>
+
+<p>Ma avrete notato che, poich&eacute; il successo &egrave; un bersaglio mobile, appena si raggiunge un obiettivo si alza subito l'asticella insieme con le aspettative. Dunque, la felicit&agrave; strettamente legata al successo &egrave; per definizione effimera e pericolosa.</p>
+
+<p>Nella mia esperienza decennale di manager in una importante realt&agrave; istituzionale del nostro Paese, avevo appena raggiunto un risultato agognato da tempo per il quale avevo anche ricevuto un encomio pubblico e scritto. Il mio livello di felicit&agrave; era alle stelle ma era strettamente connesso al risultato raggiunto e quindi &egrave; stato facile andare in frantumi quando il Direttore Generale nel giorno stesso dell'encomio mi sussurr&ograve; alle orecchie &ldquo;Ed ora che cosa ti inventerai per stupirmi ancora?&rdquo;.</p>
+
+<p>L&igrave; capii finalmente: <strong>&ldquo;La felicit&agrave; che deriva dal successo &egrave; effimera&rdquo;</strong>.</p>
+
+<h2>Il Vantaggio della Felicit&agrave;</h2>
+
+<p>In un saggio pubblicato nel volume &ldquo;Happiness e Mindfulness&rdquo; coordinato dalla Harvard Business Review e scritto da Shawn Achor, l'autore suggerisce tre specifici approcci con cui le persone possono nella propria realt&agrave; lavorativa coltivare il proprio benessere e mettersi sulla via del successo.</p>
+
+<blockquote>&ldquo;Chi mantiene un approccio mentale positivo opera pi&ugrave; efficacemente di fronte alle difficolt&agrave;. Quando la disposizione mentale &egrave; positiva, tutti gli aspetti del business mostrano dei miglioramenti.&rdquo;</blockquote>
+
+<p>I ricercatori Sonja Lyubomirsky, Laura King ed Ed Diener hanno rilevato una causalit&agrave; diretta tra soddisfazione esistenziale e successo economico: i dipendenti felici hanno, in media, una produttivit&agrave; maggiore del <strong>31%</strong>, le loro vendite sono superiori del <strong>37%</strong> e la loro creativit&agrave; &egrave; <strong>tripla</strong>.</p>
+
+<h2>Primo Approccio: Sviluppare Nuove Abitudini</h2>
+
+<p>Abituare il cervello a mantenere un atteggiamento positivo e quindi energico ed efficace non &egrave; molto diverso dall'esercitare i muscoli in palestra. Achor suggeriva 5 nuove abitudini:</p>
+<ul>
+  <li>Mettere per iscritto tre cose di cui si sentivano gratificati</li>
+  <li>Scrivere un messaggio positivo a un componente del proprio network</li>
+  <li>Meditare alla scrivania per due minuti</li>
+  <li>Fare esercizio fisico per 10 minuti</li>
+  <li>Dedicare due minuti ad annotare l'esperienza pi&ugrave; significativa delle ultime 24 ore</li>
+</ul>
+
+<p>I risultati: il punteggio medio sulla scala di soddisfazione esistenziale &egrave; passato dal 22,96 su 35 punti a 27,23 quattro mesi dopo, con un incremento del <strong>18,6%</strong>.</p>
+
+<h2>Secondo Approccio: Aiutare i Colleghi</h2>
+
+<p>Il supporto sociale &egrave; l'indicatore pi&ugrave; attendibile di felicit&agrave; nelle fasi di stress elevato. Chi aiuta i colleghi, si da fare per gli altri, invita i colleghi a pranzo e organizza le attivit&agrave; ricreative dell'ufficio non aveva solo il decuplo delle probabilit&agrave; di essere coinvolto nel lavoro rispetto ai colleghi che stavano per conto loro: aveva anche il <strong>40% in pi&ugrave;</strong> di probabilit&agrave; di ottenere una promozione.</p>
+
+<h2>Terzo Approccio: Modificare il Proprio Rapporto con lo Stress</h2>
+
+<p>Lo stress &egrave; un elemento inevitabile del lavoro. Tim Gallwey, fondatore del coaching ha riassunto il suo messaggio con questa equazione:</p>
+
+<blockquote><strong>PRESTAZIONE = POTENZIALE - INTERFERENZE</strong></blockquote>
+
+<h4>Interferenze Esterne</h4>
+<p>Tutte le interferenze che dipendono dall'ambiente circostante, sulle quali hai lo 0% del controllo. Non puoi controllare le interferenze esterne; puoi tuttavia influenzarle, e comunque modificare il tuo modo di reagire ad esse.</p>
+
+<h4>Interferenze Interne</h4>
+<p>Sono quelle che dipendono unicamente da Te, e su cui hai il 100% del controllo. Controllando le interferenze interne, ovvero l'atteggiamento mentale e l'attitudine alle relazioni, &egrave; possibile minimizzarle per ottenere performance pi&ugrave; alte.</p>
+
+<h3>Tre Passi Pratici per Gestire lo Stress</h3>
+<ol>
+  <li><strong>Mettete a fuoco!</strong> Focalizzate l'attenzione sul momento presente, l'unico nel quale potete vivere.</li>
+  <li><strong>Realizzate che il momento presente &egrave; tutto quello che avete!</strong> Fate dell'adesso il punto focale della vostra vita.</li>
+  <li><strong>Accettate quello che non puoi controllare</strong> e controllate quello che &egrave; nelle vostre possibilit&agrave;.</li>
+</ol>
+
+<p><strong>In conclusione, diventando pi&ugrave; felici accrescerete le vostre probabilit&agrave; di successo.</strong> Sviluppare nuove abitudini, prendervi cura dei vostri colleghi e adottare un atteggiamento positivo nei confronti dello stress sono ottimi punti di partenza.</p>
+
+
+    <div class="cta-box">
+      <h3>Ora tocca a te</h3>
+      <p>Prenota la tua call conoscitiva gratuita per iniziare il tuo percorso verso il successo.</p>
+      <a href="../site.html#contact" class="btn">Contattami <i class="fas fa-arrow-right"></i></a>
+      <div class="contact-links">
+        <a href="tel:+393398622626"><i class="fas fa-phone"></i> +39 339 862 2626</a>
+        <a href="mailto:info@andreadamianicoach.it"><i class="fas fa-envelope"></i> info@andreadamianicoach.it</a>
+        <a href="https://wa.me/393398622626" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      </div>
+    </div>
+  </article>
+
+  <footer class="footer-mini">
+    <p>&copy; Andrea Damiani &mdash; P.IVA 15856321003 | <a href="../site.html">Torna alla Home</a></p>
+  </footer>
+
+  <a href="https://wa.me/393398622626?text=Ciao%20Andrea%2C%20vorrei%20informazioni%20sui%20tuoi%20servizi%20di%20coaching."
+     class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</body>
+</html>
